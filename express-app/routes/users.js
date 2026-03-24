@@ -17,4 +17,11 @@ router.get('/', function(req, res, next) {
   });
 });
 
+/* POST create user. */
+router.post('/', function(req, res, next) {
+  const newUser = req.body;
+  users.push(newUser);
+  res.status(201).json(newUser);
+});
+
 module.exports = router;
